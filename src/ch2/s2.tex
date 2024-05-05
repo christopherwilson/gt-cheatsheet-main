@@ -1,0 +1,13 @@
+\wt{2.2.1 First Isomorphism Theorem for Groups} Let $\theta : G \to H$ be a group homomorphism. Then $N := \ker(\theta)$ is a normal subgroup of $G$, $\im(\theta) \le H$, and $\exists$ an isomorphism $\overline{\theta} : G/\ker(\theta) \iso \im(\theta)$ defined by $\overline{\theta}(gN) = \theta(g)$. If $\theta$ is surjective then $G/\ker(\theta) \cong H$.
+\wpf{} Let $N = \ker(\theta)$, then $N \norm G$ and $\im(\theta) \le H$. Check $\Bar{\theta}$ is well-defined, suppose that $a,b \in  G$ with $aN = bN$, then $aN = bN \Rightarrow a^{-1}b \in N \Rightarrow e_H = \theta(a^{-1}b) = \theta(a)^{-1}\theta(b) \Rightarrow \theta(a) = \theta(b),$ so $\Bar{\theta}(aN) = \Bar{\theta}(bN)$ and $\theta$ is well defined. To show $\Bar{\theta}$ reverse chain of implications, which shows $\Bar{\theta}(aN) = \Bar{\theta}(bN) \Rightarrow aN = bN$ and $\Bar{\theta} $ is injective. $\Bar{\theta}$ is a group homomorphism as $\Bar{\theta}((aN) * (bN)) = \Bar{\theta}((ab)N) = \theta(ab) = \theta(a)\theta(b) = \Bar{\theta}(aN)\Bar{\theta}(bN)$. $\Bar{\theta}$ is $\im{(\theta)}$, so $\Bar{\theta}$  is a bijective group homomorphism. 
+\wt{2.2.3 Universal Property of Factor Groups} Let $G$ be a group and let $N \norm G$. Then for any homomorphism $\psi : G \to H$ with $N \subseteq \ker(\psi)$, $\exists!$ homomorphism $\overline{\psi}: G/N \to H$ so that $\overline{\psi} \circ \can = \psi$, where $\can : G \to G/N$ is the canonical homomorphism defined $\can(g) = gN$.
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJHIl0sWzEsMCwiRy9OIl0sWzEsMSwiSCJdLFswLDEsIlxcbWF0aHJte2Nhbn0iXSxbMSwyLCJcXG92ZXJsaW5le1xccHNpfSJdLFsxLDIsIlxcZXhpc3RzISIsMl0sWzAsMiwiXFxwc2kiLDJdXQ==
+\begin{tikzcd}[ampersand replacement=\&,cramped,sep=small]
+	G \& {G/N} \\
+	\& H
+	\arrow["{\mathrm{can}}", from=1-1, to=1-2]
+	\arrow["{\overline{\psi}}", from=1-2, to=2-2]
+	\arrow["{\exists!}"', from=1-2, to=2-2]
+	\arrow["\psi"', from=1-1, to=2-2]
+\end{tikzcd}
+\wc{2.2.4} If $\phi : G \to K$ is a surjective group homomorphism, and $\psi : G \to H$ is a group homomorphism with $\ker(\phi) \subseteq \ker(\psi)$, then $\exists!$ group homomorphism $\overline{\psi}: K \to H$ s.t. $\overline{\psi} \phi = \psi$.

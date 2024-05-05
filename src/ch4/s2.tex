@@ -1,0 +1,10 @@
+\wde{4.2.1 Group Action} Let $G$ be a group and $X$ as set. An \textit{action of $G$ on $X$} is a function $G \times X \to X$, $(g,x) \mapsto g \cdot x$ satisfying the following two properties: 1) The identity acts trivially: $e \cdot x = x$ for all $x \in X$; 2) We have $g \cdot (h \cdot x) = (gh) \cdot x$ for all $g,h \in G$ and $x \in X$. If $x \in X$ then the \textit{orbit} of $x$ is $G \cdot x = \{g \cdot x : g \in G\}$. The \textit{stabiliser} of $x$ is $\Stab_{G}(x) = \{ g\in G : g \cdot x = x \}.$
+\wl{4.2.2} Let $G$ act on $X$. i) The action induces an equivalence relation $\sim$ on $X$ defined by: $x \sim y$ if and only if there exists $g \in G$ with $g \cdot x = y$. ii) The equivalence classes of this equivalence relation are the orbits. iii) The distinct orbits in $X$ form a partition of $X$.
+\wl{4.2.3} Let $G$ be a group that acts on a set $X$. For all $x \in X$ the stabiliser $\Stab_G (x)$ is a subgroup of $G$.
+\wt{4.2.6 Orbit-Stabiliser} Let $G$ be a finite group acting on a set $X$, and let $x \in X$. Then $|G| = |\Stab_G (x)||G \cdot x|.$
+\wl{4.2.7} Let $G$ be a finite group. For any $a \in G$, we have $|G| = |C_G(a)||\Cl(a)|$, where $C_G(a)$ is the \textit{centraliser}: the elements of $G$ that commute with $a$; and $\Cl(a)$ is the conjugacy class of $a$: the set $\{gag^{-1}: g \in G\}$. Thus $|C_G(a)|$ and $|\Cl(a)|$ divide $|G|$.
+\wde{Class Equation} Let $G$ be a finite group, then there are elements $a_1, a_2, \ldots, a_n \in G$ such that 
+$G = \Cl(a_1) \sqcup \Cl(a_2) \sqcup \cdots \sqcup \Cl(a_n)$. The \textit{class equation} is $|G| = \sum^n_{i=1} \Cl(a_i)$.
+\wde{4.2.11 $p$-group} Let $p$ be prime. A \textit{$p$-group} is a group $F$ such that each element has order a power of $p$. If $|G|$ is finite, then $G$ is a $p$-group if and only if $|G|$ is a power of $p$, by Cauchy's Theorem.
+\wde{Centre} The centre $Z(G)$ of $G$ is the set of elements that commute with every element of $g$.
+\wt{4.2.12} Let $G$ be a nontrivial finite $p$-group. Then the centre $Z(G) \ne \{e\}$.

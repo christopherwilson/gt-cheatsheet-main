@@ -1,0 +1,6 @@
+\wt{2.1.1} Let $G$ be a group and let $N \le G$. Then $N \norm G$ iff $N$ is the kernel of a group homomorphism from $G$ to $H$.
+\wpf ($\Leftarrow$) Let $\alpha: G \to H$ be a group homomorphism, $N = \ker{(\alpha)}$, $g \in G$, $n \in N$. Then 
+$\alpha(g^{-1} n g) = \alpha(g)^{-1} e_H \alpha(g) = e_H$. So $g^{-1}ng \in N$, thus for any $g \in G$, $g^{-1}Ng \subseteq N$ and $gNg^{-1} \subseteq N$. Therefore, 
+$g^{-1}Ng \subseteq N = g^{-1}gNg^{-1}g \subseteq g^{-1}Ng,$
+so $N = g^{-1}Ng$, $\forall g \in G$, therefore $gN = Ng$, so $N \norm G$.\newline
+($\Rightarrow$) Suppose $N \norm G$. As a set $G/N = \{\text{left/right cosets of }N\}$. Define the operation $(gN) \star (hN) = (gh)N$, which is well defined (i.e. if $g'N=gN$ and $h'N = hn$ then $(g'h')N = ghN$) as $g'h'N = g'hN =g'Nh = gNh = ghN$. $(G/N, \star) =H$ is a group, with identity $eN$, the inverse of $gN$ is $g^{-1}N$, and for associativity: $(gN \star hN) \star kN = (gh)N \star kN = (gh)kN = g(hk)N = gN \star (hN \star kN)$. Define function $\can: G \to G/N$, $\can(g)=gN$, which is a homomorphism by definition of $\star$. Let $g \in G$, then $g \in \ker(\can) \Leftrightarrow gN = N \Leftrightarrow g \in N$, so $N = \ker(\can)$.

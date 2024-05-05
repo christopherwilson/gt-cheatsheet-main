@@ -1,0 +1,57 @@
+\wt{7.3.1} Let $G$ be a finite group. Then any two composition series have the same length and the same composition factors up to isomorphism and the order in which they are listed. More precisely, if 
+$\{e\} = G_0 \norm G_1 \norm G_2 \norm \ldots \norm G_{s-1} \norm G_s = G$
+and 
+$\{e\} = H_0 \norm H_1 \norm H_2 \norm \ldots \norm H_{s-1} \norm H_s = G$, are two composition series for $G$, then $s = r$ and there is a permutation $\sigma$ of $\{0, \ldots, s-1\}$ such that $H_{i+1}/H_i \cong G_{\sigma(i)+1}/G_{\sigma(i)}$, for all $i = 0, \ldots, s-1$.
+\wpf{} Induction on $|G|$. $|G| = 1$ is trivial. Assume $|G| \ne 1$, and that the result holds for all groups with smaller order than $|G|$.
+\textbf{Case I:} First, consider when $G_{s-1} = H_{r-1}.$ In this case there are two composition series for $G_{s-1}$:
+$\{e\} = G_{0} \norm G_1 \norm \ldots \norm G_{s-1} \ (\dag)$ and 
+$\{e\} = H_{0} \norm H_1 \norm \ldots \norm H_{r-1} = G_{s-1}\ (\ddag)$.
+Applying the inductive hypothesis to $G_{s-1}$, we see that $s-1 = r-1$, and there is a permutation $\sigma$ on the set $\{0,1,\ldots,s-2\}$ s.t. $H_{i+1}/H_i \cong G_{\sigma(i)+1}/G_{\sigma(i)},$ $\forall i = 0, \ldots, s-2$. Extend $\sigma$ to a perm. on $\{0,1,\ldots,s-2, s-1\}$ by setting $\sigma(s-1) := s-1$. Now, $H_s/H_{s-1} = G/H_{s-1} = G/G_{s-1} = G_{\sigma(s-1)+1}/G_{\sigma(s-1)}$.
+\textbf{Case II:} Consider when $G_{s-1} \ne H_{r-1}$. Note $G_{s-1} \nsubseteq H_{r-1}:$ by Corr. Thm, if $G_{s-1} \subseteq H_{r-1}$, since $G/G_{s-1}$ is simple and $H_{r-1} \norm G$ with $H_{r-1} \ne G$, we whould have $H_{r-1} = G_{s-1}$. Likewise, $H_{r-1} \nsubseteq G_{s-1}$. Let $K = G_{s-1}\cap H_{r-1}$. We saw in proof of 2nd Iso. Thm. that $K \norm G_{s-1}$ and $K \norm H_{r-1}.$ By 2nd Iso. Thm. we have 
+$G_{s-1}/K \cong G_{s-1}H_{r-1}/H_{r-1}$.
+Further, $G_{s-1}H_{r-1}=G$, because $G_{s-1}H_{r-1}$ is not only a subgroup of $G$, it is a \textit{normal} subgroup: if $g \in G_{s-1}, h \in H_{r-1}$, and $a \in G$ then $agha^{1-} = aga^{-1}aha^{-1} \in G_{s-1}H_{r-1}$, since $G_{s-1}$ and $H_{r-1}$ are normal subgroups of $G$. By Corr. Thm, then, and using simplicity of $G/G_{s-1}$, either $G_{s-1}H_{r-1} = G$ or $G_{s-1}H_{r-1} = G_{s-1}$. Since $H_{r-1} \nsubseteq G_{s-1}$ second doesn't happen, so $G_{s-1}H_{r-1} = G$. Combining we get 
+$G_{s-1}/K \cong G_{s-1}H_{r-1}/H_{r-1} = G/H_{r-1}.$
+Likewise,
+$H_{r-1}/K \cong G_{s-1}H_{r-1}/G_{s-1} = G/G_{s-1}.$
+$G_{s-1}/K$ and $H_{r-1}/K$ are simple groups since $G/H_{r-1}$ and $G/G_{s-1}$ are simple. By Prop 7.2.1, $K$ has a composition series, say 
+$\{e\} = K_0 \norm K_1 \norm K_2 \norm \ldots \norm K_t = K.$ 
+% https://q.uiver.app/#q=WzAsMjEsWzEsMCwiXFx7ZVxcfSJdLFsyLDAsIkdfMSJdLFszLDAsIlxcbGRvdHMiXSxbNCwwLCJHX3tzLTN9Il0sWzUsMCwiR197cy0yfSJdLFs2LDAsIkdfe3MtMX0iXSxbNywxLCJHIl0sWzYsMiwiSF97ci0xfSJdLFs1LDEsIktfdCJdLFs1LDIsIkhfe3ItMn0iXSxbNCwyLCJIX3tyLTN9Il0sWzMsMiwiXFxsZG90cyJdLFsyLDIsIkhfMSJdLFsxLDIsIlxce2VcXH0iXSxbMSwxLCJcXHtlXFx9Il0sWzIsMSwiS18xIl0sWzMsMSwiXFxsZG90cyJdLFs0LDEsIktfe3QtMX0iXSxbMCwwLCIoXFxkYWcpIl0sWzAsMSwiKCopIl0sWzAsMiwiKFxcZGRhZykiXSxbMCwxLCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsMiwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDMsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMyw0LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzQsNSwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs1LDYsIkcvR197cy0xfSIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNiw3LCJHL0hfe3ItMX0iLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzUsOCwiRy9IX3tyLTF9IiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs4LDcsIkcvR197cy0xfSIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNyw5LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzksMTAsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTAsMTEsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTEsMTIsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTIsMTMsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTQsMTUsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTUsMTYsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTYsMTcsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTcsOCwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+\begin{tikzcd}[ampersand replacement=\&,cramped,sep=small]
+	{(\dag)} \& {\{e\}} \& {G_1} \& \cdots \& {G_{s-3}} \& {G_{s-2}} \& {G_{s-1}} \\
+	{(*)} \& {\{e\}} \& {K_1} \& \cdots \& {K_{t-1}} \& {K_t} \&\& G \\
+	{(\ddag)} \& {\{e\}} \& {H_1} \& \cdots \& {H_{r-3}} \& {H_{r-2}} \& {H_{r-1}}
+	\arrow[no head, from=1-2, to=1-3]
+	\arrow[no head, from=1-3, to=1-4]
+	\arrow[no head, from=1-4, to=1-5]
+	\arrow[no head, from=1-5, to=1-6]
+	\arrow[no head, from=1-6, to=1-7]
+	\arrow["{G/H_{r-1}}", no head, from=1-7, to=2-6]
+	\arrow["{G/G_{s-1}}", no head, from=1-7, to=2-8]
+	\arrow[no head, from=2-2, to=2-3]
+	\arrow[no head, from=2-3, to=2-4]
+	\arrow[no head, from=2-4, to=2-5]
+	\arrow[no head, from=2-5, to=2-6]
+	\arrow["{G/G_{s-1}}", no head, from=2-6, to=3-7]
+	\arrow["{G/H_{r-1}}", no head, from=2-8, to=3-7]
+	\arrow[no head, from=3-3, to=3-2]
+	\arrow[no head, from=3-4, to=3-3]
+	\arrow[no head, from=3-5, to=3-4]
+	\arrow[no head, from=3-6, to=3-5]
+	\arrow[no head, from=3-7, to=3-6]
+\end{tikzcd}
+In the above diagram % https://q.uiver.app/#q=WzAsMixbMSwwLCJHX3tzLTF9Il0sWzAsMCwiS190Il0sWzAsMSwiRy9IX3tyLTF9IiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+\begin{tikzcd}[ampersand replacement=\&,cramped,sep=small]
+	{K_t} \& {G_{s-1}}
+	\arrow["{G/H_{r-1}}"', no head, from=1-2, to=1-1]
+\end{tikzcd} means $K_t \norm G_{s-1}$ and $G/H_{r-1} \cong G_{s-1}/K_t$. Can construct two composition series for $G_{s-1}$: $\{e\} = K_0 \norm K_1 \norm \ldots \norm K_t = K \norm G_{s-1}$ by using $(*)$, and 
+$\{e\} = G_0 \norm G_1 \ldots \norm G_{s-1}$ from $(\dag)$. By applying inductive hypothesis to $G_{s-1}$, we conclude that $s-1 = t+1$, similarly $r-1 = t+1$, so $s = r$. There are now four composition series for $G$ each of length $S$: 
+$(1)$: $\{e\} = G_0 \norm G_1 \norm \ldots \norm G_{s-1} \norm G_{s} = G$; 
+$(2)$: $\{e\} = K_0 \norm K_1 \norm \ldots \norm K_t \norm G_{s-1} \norm G_{s} = G$; 
+$(3)$: $\{e\} = K_0 \norm K_1 \norm \ldots \norm K_t \norm H_{r-1} \norm H_{r} = G$; and
+$(4)$: $\{e\} = H_0 \norm H_1 \norm \ldots \norm H_{r-1} \norm H_{r} = G$. By Case I we know the theorem holds for $(1)$ and $(2)$. Thus, the composition factors 
+$(1'):$ $(G_1/G_0, \ldots, G_{s-1}/G_{s-2}, G/G_{s-1})$; and 
+$(2'):$ $(K_1/K_0, \ldots, K/K_{t-1}, G_{s-1}/K, G/G_{s-1})$ 
+are the same up to isomorphism and order of the composition factors. Likewise, the composition factors 
+$(3'):$ $(K_1/K_0, \ldots, K/K_{t-1}, H_{r-1}/K, H/H_{r-1})$ and 
+$(4'):$ $(H_1/H_0, \ldots, H_{r-1}/H_{r-2}, H/H_{r-1})$ are the same up to isomorphism and order of the composition factors. 
+To finish, we compare $(2)$ and $(3)$ by comparing $(2')$ and $(3')$. The only difference is the two groups at the end of each, but we have seen that $G_{s-1}/K \cong H/H_{r-1}$ and $H_{r-1}/K \cong G/G_{s-1}$, thus $(2')$ and $(3')$ are the same up to isomorphism and order of the composition factors. Therefore, $(1')$ and $(4')$ are also the same. $\qed$

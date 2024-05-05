@@ -1,0 +1,23 @@
+\wde{8.2.1 Commutator} Let $G$ be a group. The \emph{commutator} of two elements $a,b \in G$ is the element $aba^{-1}b^{-1}$, and is often denoted by $[a,b]$. The \emph{derived subgroup} (or \emph{commutator subgroup}) $G'$; that is, 
+$G' := \cyc{aba^{-1}b^{-1}\ |\ a,b \in G}$.
+\wt{8.2.2} Let $G$ be a group and let $N$ be a normal subgroup of $G$. Then $G/N$ is abelian if and only if $G' \subseteq N$. In particular, $G/ G'$ is abelian.
+\wpf{} Suppose that $G' \subseteq N$ and choose $a,b \in G$. Then $(ab)(ba)^{-1} - aba^{-1}b^{-1} \in G' \subseteq N$. 
+Thus, $abN = baN$, and it follows that 
+$aN\cdot bN = abN = baN = bN \cdot aN;$ 
+and so $G/N$ is abelian.
+Conversely, suppose that $G/N$ is abelian, and let $a,b \in G$. Then 
+$[a,b]N = aba^{-1}b^{-1}N = aN\cdot bN \cdot a^{-1}N \cdot b^{-1}N = aN \cdot a^{-1}N \cdot bN \cdot b^{-1}N = aa^{-1}bb^{-1}N = N;$
+and so $[a, b] \in N$. Now, 
+$G'  = \cyc{[a,b] | a,b \in G} \le N,$ 
+as required.
+\wde{8.2.3 Derived Series} Let $G$ be a group. Set $G^0 = G$ and for each $i \ge 0$, set $G^{(i+1)} := (G^{(i)})'.$ The sequence
+$G = G^{(0)} \normr G^{(1)} \normr G^{(2)} \normr \cdots$ is called the \emph{derived series} of $G$.
+\wt{8.2.4} A group $G$ is solvable if and only if there is an $n$ with $G^{(n)} = \{e\}$.
+\wpf{} Suppose $G^{(n)} = \{e\}$ for some $n$, then the series 
+$G = G^{(0)} \normr G^{(1)} \normr \cdots G^{(n)} = \{e\}$ 
+has abelian factors $G^{(i)}/G^{(i+1)}$, since $G^{(i)}/G^{(i+1)} = G^{(i)}/(G^{(i)})'$. Thus $G$ is solvable.
+For the converse, suppose that $G$ is solvable and that 
+$G = G_0 \normr G_1 \normr \cdots \normr G_n = \{e\}$
+is a subnormal series with abelian factors. Prove by induction on $s$ that $G^{(s)} \subseteq G_s$ and the result follows by taking $s = n$. 
+Note $G^{(0)} = G = G_0;$ so the case $s = 0$ is true. Assume that $s \ge 0$ and that $G^{(s)} \subseteq G_s.$ Then, $G^{(s+i)} := (G^{(s)})' \le G'_s$. However, $G'_s \le G_{s+1}$ because $G_s/G_{s+1}$ is abelian; and so $G^{(s+1)} \le G_{s+1}$.
+\wde{8.2.5} Let $G$ be a solvable group. Then $G^{(n)} = \{e\}$ for some $n$. The least such $n$ is the \emph{derived length} of $G$.

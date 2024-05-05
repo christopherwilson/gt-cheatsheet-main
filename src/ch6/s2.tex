@@ -1,0 +1,8 @@
+\wde{6.2.1 Alternating Group} Let 
+$P := \prod_{1 \le i < j \le n}(x_i-x_j).$ 
+and $X = \{P,-P\}$. $S_n$ acts on $X$ by permuting the variables.
+If $\sigma \in S_n$ fixes $P$ then $\sigma$ is an \textit{even permutation}, while if $\sigma \cdot P = -P$ then $\sigma$ is an \emph{odd permutation}. The set of even permutations is denoted by $A_n$ and is called the \emph{alternating group}.
+\wl{6.2.2} The product of two even permutations is even. The product of two odd permutations is even. the product of an odd and even permutation is odd. A cycle of length $n$ is even if $n$ is odd and is odd if $n$ is even.
+\wt{6.2.3} Let $n \ge 2$. Then the set of even permutations $A_n$ is a normal subgroup of $S_n$ of index 2; so that $|A_n| = |S_n|/2 = n!/2$ for $n \ge 2$.
+\wpr{6.2.4} The alternating group $A_4$ has order 12. It has a unique subgroup $N$ of order 4. The subgroup $N$ is normal in $S_4$ (and so certainly $N \norm A_4$) and $A_4/N \cong C_3$, while $S_4/N \cong S_3$. $N := \{(), (12)(34), (13)(24), (14)(23)\}$.
+\wl{6.2.5} Let $G$ be a finite group and suppose that $H \norm G$. Then there are $h_1, \ldots, h_k \in H$ so that $H = \bigsqcup\Cl_G(h_i).$

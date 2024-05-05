@@ -1,0 +1,19 @@
+\wde{8.1.1 Subnormal Series} Let $G$ be a group. A \emph{subnormal series} for $G$ is a series of subgroups 
+$\{e\} = G_0 \norm G_1 \norm \cdots \norm G_s = G.$
+\wde{8.1.2 Solvable} A group $G$ is \emph{solvable} (or \emph{soluble}) provided that it has a subnormal series 
+$\{e\} = G_0 \norm G_1 \norm G_2 \norm \cdots \norm G_n = G$ 
+such that each factor $G_{i+1}/G_i$ is abelian.
+\wt{8.1.4} A finite group $G$ is solvable if and only if all the composition factors of $G$ are cyclic.
+\wpf{} ($\Leftarrow$) from definition. 
+($\Rightarrow$) Induct on $|G|$. Let 
+$\{e\} = G_0 \norm \ldots \norm G_{s-1} \norm G_{s} = G$ be a subnormal series with abelian factors, and wlog suppose that each $G_{i-1} \ne G_i$. By induction, the composition factors of $G_{s-1}$ are cyclic, but $G/G_{s-1}$ is abelian, and we have Lem. 8.1.5. By lem. 7.2.2, the composition factors of $G$ are made up of those of $G_{s-1}$ and those of $G/G_{s-1}$. We have seen all these composition factors are cyclic.
+\wl{8.1.5} If $A$ is a finite abelian group of order $p^{n_1}_1 p^{n_2}_2 \ldots p^{n_k}_k$, then the composition factors of $A$ are 
+$\underbrace{C_{p_1}, \ldots, C_{p_1}}_{n_1},\underbrace{C_{p_2}, \ldots, C_{p_2}}_{n_2},\ldots,\underbrace{C_{p_k}, \ldots, C_{p_k}}_{n_k},$ in some order.
+\wt{8.1.6} Let $G$ be a group and let $N \norm G$. Then $G$ is solvable if and only if both $N$ and $G/N$ are solvable.
+\wpf{} ($G$ finite) combine Lem 7.2.2 and Thm. 8.1.4.
+\wt{8.1.7} If $G$ is solvable and $H \le G$ then $H$ is solvable.
+\wpf{} ($G$ finite) Let $\{e\} = G_0 \norm \ldots \norm G_{s} = G$ be a composition series for $G$. For $0 \le i \le s$, let $H_i = H \cap G_i$. Since $G_{i-1} \norm G_{i}$, we have $H_{i-1} \norm H_i$.
+Let $\theta = \can_{G_{i-1}} : G_i \to G_i/G_{i-1}.$ Notice that $\ker\theta \cap H_i = G_{i-1} \cap H_i = H_{i-1}$. So we have: 
+$H_i/H_{i-1} = H_i/(H_i \cap \ker\theta) \cong \theta(H_i) \subseteq G_i/G_{i-1}$. That is, $H_i/H_{i-1}$ is isomorphic to a subgroup of $G_i/G_{i-1}$, which is cyclic of prime order. Thus we either have: $H_{i-1} = H_i$ (an $H_i/H_{i-1}$ is trivial); or $H_i/H_{i-1} \cong G_i/G_{i-1}$. By removing repeated $H_i$'s, we get integers $0 < i_1 < i_2 < i_t < s$ so that 
+$\{e\} \norm H_{i_1} \norm H_{i_2} \norm \ldots \norm H_{i_t} = H$ is a composition series for $H$. All composition factors are cyclic and so $H$ is solvable.
+\wt{8.1.9} A general degree $n$ polynomial $f(x)$ with rational coefficients is not solvable by radicals if $n \ge 5$.

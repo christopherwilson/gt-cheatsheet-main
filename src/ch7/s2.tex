@@ -1,0 +1,11 @@
+\wpr{7.2.1} If $G$ is a finite group, then $G$ has a composition series.
+\wpf{} Induct on $|G|$. If $G$ is simple, then $\{e\} \norm G$ is a composition series for $G$. If not, then $G$ has a non-trivial normal subgroup, $N$. Since both $|N|$ and $|G/N|$ are strictly less than $|G|$, by induction both $N$ and $G/N$ have composition series. Lem. 7.2.2 shows we can glue these composition series together to make one for $G$.
+\wl{(sub) 7.2.2} Let 
+$\{e\} = G_0 \norm G_1 \norm \ldots \norm G_s = N$
+be a composition series for $N$, and 
+$N = H_0 \norm H_1 \norm \ldots \norm H_r = G/N$
+be a composition series for $G/N$. Then there is a composition series for $G$ of length $s + r$, whose composition factors are, in order, 
+$G_1, G_2/G_1, \ldots, G_s/G_{s-1},H_1,H_2/H_1,\ldots,H_r/H_{r-1}$.
+\wpf{} Apply Thm. 2.3.3. Let $\can: G \to G/N$. For each $0 \le i \le r$, let $G_{i+s} = \can^{-1}(H_i).$ By Thm. 2.3.3, each $G_{s+i} \norm G_{s+i+1}$. By 3rd Iso. Thm, we have 
+$G_{s+i+1}/G_{s+i} \cong \frac{G_{s+i+1}/N}{G_{s+i}/N} = H_{i+1}/H_i.$ In particular, this group is simple. Thus 
+$\{e\} = G_0 \norm G_1 \norm \ldots \norm G_{s} \norm G_{s+1} \norm \ldots \norm G_{s+r} = \can^{-1}(G/N) = G$ is a composition series for $G$ with composition factors are as claimed.

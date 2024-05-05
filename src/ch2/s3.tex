@@ -1,0 +1,21 @@
+\wpr{2.3.1} Let $G$ be a group and let $N \norm G$. Let $\can : G \to G/N$ be the canonical map. Let $K \le G/N$. (a) $\can^{-1}(K) \le G$, with $N \subseteq \can^{-1}(K)$. (b) $
+\can^{-1}(K) \norm G$ iff $K \norm G/N$.
+\wpr{2.3.2}  Let $N \norm G$ and let $\can : G \to G/N$ be the canonical map. If $N \le H \le G$, then $H = \can^{-1}(\can(H))$.
+\wt{2.3.3 Correspondence} Let $G$ be a group, $N \norm G$, and let $\can : G \to G/N$ be the canonical map. The map $H \mapsto \can(H)$ is a bijection between the subgroups of $G$ containing $N$ and subgroups of $G/N$. Under this bijection, normal subgroups match with normal subgroups; further, if $N \subseteq A,B \le G$, then $\can(A) \subseteq \can(B)$ iff $A \subseteq B$.
+\wpf{} Since $\can = \theta$ is surjective, if $K \subseteq G/N$, then $K = \theta(\theta^{-1}(K))$, which combined with Props. 2.3.1 and 2.3.2 gives bijection and normal subgroups matching normal subgroups. Suppose that $N \le A \le B \le G$, then $\theta(A) \subseteq \theta(B)$. Now suppose $\theta(A) \subseteq \theta(B)$, let $a \in A$, then there is some $b \in B$ with $aN = bN$. Then $ab^{-1} \in N$, so there is $n \in N$ with $ab^{-1} = n$. This means $a = nb \in B$, since $N \subseteq B$, so $A \subseteq B$.
+\wt{2.3.5 Third Isomorphism} If $N \le H \le G$, with $N, H \norm G$, then $(G/N)/(H/N) \cong G/H$.
+\wpf{} % https://q.uiver.app/#q=WzAsMyxbMCwwLCJHIl0sWzEsMCwiRy9OIl0sWzEsMSwiRy9IIl0sWzAsMSwiXFxjYW5fTiJdLFsxLDIsIlxccGkiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMCwyLCJcXGNhbl9IIiwyXV0=
+\begin{tikzcd}[ampersand replacement=\&,cramped, sep=small]
+	G \& {G/N} \\
+	\& {G/H}
+	\arrow["{\can_N}", from=1-1, to=1-2]
+	\arrow["\pi", dashed, from=1-2, to=2-2]
+	\arrow["{\can_H}"', from=1-1, to=2-2]
+\end{tikzcd} We want to show $\pi$ exists. $H = \ker(\can_H) \supseteq N = \ker(\can_N)$. By Theorem 2.2.3 there is a homomorphism $\pi : G/N \to G/H$ with $h \circ \can_N = \can_H$, since $\can_H$ is surjective, $\pi$ is surjective as well. $gN \in \ker(\pi) \Leftrightarrow e = \pi(gN) = \pi(\can_N(g)) = \can_H(g)$, so $gN \in \ker(\pi) \Leftrightarrow g \in \ker(\can_H) = H$, that is, $\ker\pi = H/N$, so by Theorem 2.2.1, $(G/N)/(H/N) \cong \im(\pi) = G/H$.
+%
+\wt{2.3.7 Second Isomorphism} Let $N \norm G$. Let $H \le G$. Then: i) $HN \le G$; ii) $N \norm HN$; iii) $H \cap N \norm H$; and iv) there is an isomorphism $HN/N \cong H/(H \cap N)$.
+\wpf{} (i) $e = ee \in HN$, as $H, N \le G$; so $HN \ne \emptyset$. Let $h, h' \in H$ and $n, n' \in N$, then $(hn)(h'n')^{-1} = hn(n')^{-1}(h')^{-1}$. Since $N \norm G$ and $n(n')^{-1}(h')^{-1} \in N(h')^{-1} = (h')^{-1}N$, there is some $n'' \in N$ with $n(n')^{-1}(h')^{-1} = (h')^{-1}n''$, so 
+$(hn)(h'n')^{-1} = hn(n')^{-1}(h')^{-1} = h(h')^{-1}n'' \in HN,$ as $H \le G$. Thus $HN \le G$. 
+(ii) $N = eN \in HN$ as $e \in H$, so $N \norm HN$ follow immediately, because the elements of $HN$ are in $G$ and $N \norm G$.
+(iii) Let $a \in (H \cap N)$ and $h \in H$. Then $hah^{-1} \in H$, because $H \le G$ and $hah^{-1} \in N$, as $N \norm G$. Hence, $hah^{-1} \in (H \cap N);$ and so $H \cap N \norm H$.
+(iv) Need surjective homomorphism $\theta: H \to HN/N$ with kernel $H \cap N$. Let $\theta = \can_N |_H$. Trivially group homomorphism, and by Theorem 2.3.3 and $N \subseteq HN$, the image is $HN/N$, finally $\ker(\theta) = \ker(\can_N)\cap H = N \cap H$. $\theta$ is surjective as if $(hn)N \in HN/N \le G/N$, then $hnN = hN \in G/N$ and $hN = \can_N(h) = \theta(h)$ since $h \in H$. With this and Theorem 2.2.1 $H/(H\cap N) \cong \im(\theta) \cong HN/N.$
